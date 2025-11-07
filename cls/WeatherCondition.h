@@ -1,4 +1,6 @@
-#pragma once
+#ifndef WeatherCondition_H
+#define WeatherCondition_H
+
 #include <string>
 
 class WeatherCondition {
@@ -9,3 +11,5 @@ public:
     std::string getDescription() const;
     double getImpact() const;
 };
+
+#endif

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef VarietyBonus_H
+#define VarietyBonus_H
+
 #include <cstddef>
 
 struct VarietyBonus {
@@ -18,3 +20,5 @@ struct VarietyBonus {
           droughtResistance(dr), frostResistance(fr),
           protein(p), gluten(g), yieldPotential(y) {}
 };
+
+#endif 

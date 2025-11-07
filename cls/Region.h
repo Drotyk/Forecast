@@ -1,4 +1,6 @@
-#pragma once
+#ifndef Region_H
+#define Region_H
+
 #include <string>
 
 class Region {
@@ -9,3 +11,4 @@ public:
     std::string getName() const;
     double getFactor() const;
 };
+#endif 

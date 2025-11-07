@@ -1,4 +1,6 @@
-#pragma once
+#ifndef WHEAT_YIELD_PREDICTOR_H
+#define WHEAT_YIELD_PREDICTOR_H
+
 #include <vector>
 #include <string>
 #include <iostream>
@@ -23,3 +25,5 @@ public:
     double calculateYield();
     void displayPrediction();
 };
+
+#endif

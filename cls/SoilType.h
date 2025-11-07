@@ -1,4 +1,6 @@
-#pragma once
+#ifndef SoilType_H
+#define SoilType_H
+
 #include <string>
 
 class SoilType {
@@ -9,3 +11,5 @@ public:
     std::string getName() const;
     double getFactor() const;
 };
+
+#endif

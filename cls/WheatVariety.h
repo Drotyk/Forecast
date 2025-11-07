@@ -1,4 +1,6 @@
-#pragma once
+#ifndef WheatVariety_H
+#define WheatVariety_H
+
 #include <string>
 #include "VarietyBonus.h"
 
@@ -24,3 +26,5 @@ public:
     VarietyBonus getBonus() const;
     void setResistant(bool r);
 };
+
+#endif

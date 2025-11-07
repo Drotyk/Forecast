@@ -1,4 +1,6 @@
-#pragma once
+#ifndef FertilizerEffect_H
+#define FertilizerEffect_H
+
 #include <string>
 
 class FertilizerEffect {
@@ -9,3 +11,4 @@ public:
     std::string getName() const;
     double getIncrease() const;
 };
+#endif
