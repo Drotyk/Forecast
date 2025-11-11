@@ -11,7 +11,8 @@ WheatYieldPredictor::WheatYieldPredictor(WheatVariety v, SoilType s, FertilizerE
       region(std::move(r)) {}
 
 double WheatYieldPredictor::averageImpact(const std::vector<WeatherCondition>& v) {
-    if (v.empty()) return 0.0;
+    if (v.empty()) 
+    return 0.0;
     double sum = 0.0;
     for (const auto& w : v) sum += w.getImpact();
     return sum / v.size();
@@ -53,9 +54,9 @@ void WheatYieldPredictor::displayPrediction() {
     auto showSeason = [](const std::string& name, const std::vector<WeatherCondition>& conds) {
         std::cout << name << ": ";
         if (conds.empty()) std::cout << "—";
-        else for (size_t i = 0; i < conds.size(); ++i) {
-            std::cout << conds[i].getDescription();
-            if (i < conds.size() - 1) std::cout << ", ";
+        else for (size_t idx = 0; idx < conds.size(); ++idx) {
+            std::cout << conds[idx].getDescription();
+            if (idx < conds.size() - 1) std::cout << ", ";
         }
         std::cout << "\n";
     };

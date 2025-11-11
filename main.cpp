@@ -3,11 +3,12 @@
 #include <cstdlib>
 #include <algorithm>
 #include "WheatYieldPredictor.h"
+
 using namespace std;
 
 #ifdef _WIN32
 #define CLEAR "cls"
-#else
+#else 
 #define CLEAR "clear"
 #endif
 
@@ -16,8 +17,8 @@ template<typename T, typename GetNameFunc>
 int chooseFromList(const vector<T>& items, const string& title, GetNameFunc getName) {
     system(CLEAR);
     cout << "===== " << title << " =====\n";
-    for (size_t i = 0; i < items.size(); ++i)
-        cout << i + 1 << ". " << getName(items[i]) << "\n";
+    for (size_t idx = 0; idx < items.size(); ++idx)
+        cout << idx + 1 << ". " << getName(items[idx]) << "\n";
     cout << "\n> ";
     int choice;
     cin >> choice;
@@ -28,8 +29,8 @@ int chooseFromList(const vector<T>& items, const string& title, GetNameFunc getN
 vector<WeatherCondition> chooseWeatherSeason(const string& season, const vector<WeatherCondition>& options) {
     system(CLEAR);
     cout << "\nОберіть погодні умови для сезону [" << season << "] (через пробіл, 0 — завершити):\n";
-    for (size_t i = 0; i < options.size(); ++i)
-        cout << i + 1 << ". " << options[i].getDescription() << "\n";
+    for (size_t idx = 0; idx < options.size(); ++idx)
+        cout << idx + 1 << ". " << options[idx].getDescription() << "\n";
     cout << "> ";
 
     vector<WeatherCondition> chosen;
